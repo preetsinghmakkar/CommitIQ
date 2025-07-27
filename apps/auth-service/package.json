@@ -16,7 +16,7 @@
           "format": [
             "cjs"
           ],
-          "bundle": false,
+          "bundle": true,
           "main": "apps/auth-service/src/main.ts",
           "tsConfig": "apps/auth-service/tsconfig.app.json",
           "assets": [
@@ -50,15 +50,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "@commit-iq/auth-service:build",
+          "buildTarget": "@carbs-n-carts/auth-service:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "@commit-iq/auth-service:build:development"
+            "buildTarget": "@carbs-n-carts/auth-service:build:development"
           },
           "production": {
-            "buildTarget": "@commit-iq/auth-service:build:production"
+            "buildTarget": "@carbs-n-carts/auth-service:build:production"
           }
         }
       },
@@ -71,7 +71,7 @@
         "dependsOn": [
           "build"
         ],
-        "command": "docker build -f apps/auth-service/Dockerfile . -t commit-iq-auth-service"
+        "command": "docker build -f apps/auth-service/Dockerfile . -t carbs-n-carts-auth-service"
       }
     }
   }
